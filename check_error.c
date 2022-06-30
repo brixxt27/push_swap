@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   check_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/06/30 21:12:15 by jayoon           ###   ########.fr       */
+/*   Created: 2022/06/30 21:12:38 by jayoon            #+#    #+#             */
+/*   Updated: 2022/06/30 21:12:58 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <stdlib.h>
-
-typedef struct s_node
+void	check_error(t_error e, long long data)
 {
-	int				value;
-	struct s_list	*prev;
-	struct s_list	*next;
-}	t_node;
-
-typedef struct s_linked_list
-{
-	int		num_node;
-	t_node	*head;
-	t_node	*tail;
-}	t_list;
-
-typedef enum e_error
-{
-	E_ARGV
-}	t_error;
-
-#endif
+	if (e == E_ARGV && data == 0)
+	{
+		ft_putstr_fd("Argv is NULL!\n", 2);
+		exit(1);
+	}
+}

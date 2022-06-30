@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/06/30 21:12:15 by jayoon           ###   ########.fr       */
+/*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
+/*   Updated: 2022/06/30 21:12:25 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include <stdlib.h>
-
-typedef struct s_node
+void	check_exeception(char **argv)
 {
-	int				value;
-	struct s_list	*prev;
-	struct s_list	*next;
-}	t_node;
+	int	i;
 
-typedef struct s_linked_list
+	check_error(E_ARGV, (long long)argv);
+	i = 0;
+	while (*argv)
+	{
+		while ((*argv)[i])
+		*argv++;
+	}
+}
+
+int	main(int argc, char *argv[])
 {
-	int		num_node;
-	t_node	*head;
-	t_node	*tail;
-}	t_list;
-
-typedef enum e_error
-{
-	E_ARGV
-}	t_error;
-
-#endif
+	check_exeception(argv);
+	return (0);
+}
