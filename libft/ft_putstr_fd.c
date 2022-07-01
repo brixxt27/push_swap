@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_error.c                                      :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 21:12:38 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 17:13:54 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/01 17:14:09 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/01 17:15:39 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	check_error(t_error e, long long data)
+void	ft_putstr_fd(char *str, int fd)
 {
-	if (e == E_ARGV_EMPTY && data == 0)
-	{
-		exit(1);
-	}
-	if (e == E_IS_NUM && data == 0)
-	{
-		ft_putstr_fd("Error\n", 2);
-		exit(1);
-	}
+	write(fd, str, ft_strlen(str));
 }
