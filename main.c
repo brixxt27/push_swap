@@ -6,24 +6,22 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 15:23:31 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/01 15:50:00 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_is_space(char c)
+void	check_is_number(char c)
 {
-	if (c == ' ')
-		return (1);
-	return (0);
+	if (!ft_is_number)
 }
 
 void	check_exeception(char **argv)
 {
 	int	i;
 
-	check_error(E_ARGV, (long long)argv);
+	check_error(E_ARGV_EMPTY, (long long)argv);
 	i = 0;
 	while (*argv)
 	{
@@ -34,6 +32,7 @@ void	check_exeception(char **argv)
 				i++;
 				continue ;
 			}
+			check_is_number((*argv)[i]);
 		}
 		*argv++;
 	}

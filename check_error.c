@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:12:38 by jayoon            #+#    #+#             */
-/*   Updated: 2022/06/30 22:01:39 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/01 15:50:00 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	check_error(t_error e, long long data)
 {
-	if (e == E_ARGV && data == 0)
+	if (e == E_ARGV_EMPTY && data == 0)
 	{
 		exit(1);
 	}
