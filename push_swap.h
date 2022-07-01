@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/06/30 21:12:15 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/01 15:30:45 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,11 @@ typedef enum e_error
 {
 	E_ARGV
 }	t_error;
+
+// check_exeception.c
+void	check_exeception(char **argv);
+
+// check_error.c
+void	check_error(t_error e, long long data);
 
 #endif
