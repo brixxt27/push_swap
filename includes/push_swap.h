@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 17:12:31 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/01 20:52:20 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct s_linked_list
 
 typedef enum e_error
 {
-	E_ARGV_EMPTY,
 	E_IS_NUM
 }	t_error;
 

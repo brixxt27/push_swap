@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_is_null.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 17:14:09 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:47:32 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/01 20:46:14 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/01 20:51:43 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putstr_fd(char *str, int fd)
+int	ft_is_null(void *mem)
 {
-	write(fd, str, ft_strlen(str));
+	if (mem == NULL)
+		return (1);
+	return (0);
 }

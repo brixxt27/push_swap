@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_is_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 17:14:09 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:47:32 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/01 20:41:25 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/01 20:46:58 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
-
-void	ft_putstr_fd(char *str, int fd)
+int	ft_is_number(char c)
 {
-	write(fd, str, ft_strlen(str));
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
