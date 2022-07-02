@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2021/11/27 22:44:08 by jayoon            #+#    #+#             */
+/*   Updated: 2022/01/14 16:03:02 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-int	ft_putstr_fd(char *s, int fd)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	len;
+	size_t	needle_len;
+	size_t	i;
 
-	if (!s)
-		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
+	needle_len = ft_strlen(needle);
+	i = 0;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (haystack[i] && needle_len + i <= len)
+	{
+		if (haystack[i] == *(needle)
+			&& !ft_memcmp(haystack + i, needle, needle_len))
+			return ((char *)(haystack + i));
+		i++;
+	}
+	return (NULL);
 }

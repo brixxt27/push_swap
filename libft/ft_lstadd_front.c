@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_null.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 20:52:42 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:52:56 by jayoon           ###   ########.fr       */
+/*   Created: 2022/01/11 22:42:16 by jayoon            #+#    #+#             */
+/*   Updated: 2022/01/12 16:43:59 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void	check_null(void *mem)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (ft_is_null(mem))
-		exit (0);
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

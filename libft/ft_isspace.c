@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/02 17:55:29 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/02 17:56:44 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
-
-int	ft_putstr_fd(char *s, int fd)
+int	ft_isspace(int c)
 {
-	int	len;
-
-	if (!s)
-		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
+	if (c == ' ' || c == '\n' || c == '\t'
+		|| c == '\v' || c == '\r' || c == '\f')
+		return (1);
+	return (0);
 }

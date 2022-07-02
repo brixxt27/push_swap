@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:52:20 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/02 17:53:55 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ typedef struct s_node
 	struct s_list	*next;
 }	t_node;
 
-typedef struct s_linked_list
+typedef struct s_stack_using_linked_list
 {
 	int		num_node;
 	t_node	*head;
 	t_node	*tail;
-}	t_list;
+}	t_stack;
 
 typedef enum e_error
 {
@@ -35,7 +35,7 @@ typedef enum e_error
 }	t_error;
 
 // check_exeception.c
-void	check_exeception(char **argv);
+void	check_exeception(int argc, char **argv);
 
 // check_error.c
 void	check_error(t_error e, long long data);

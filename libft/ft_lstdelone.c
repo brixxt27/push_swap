@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_number.c                                     :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 20:41:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:46:58 by jayoon           ###   ########.fr       */
+/*   Created: 2022/01/12 18:14:25 by jayoon            #+#    #+#             */
+/*   Updated: 2022/01/12 18:29:36 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_number(char c)
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }

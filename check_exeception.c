@@ -1,20 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_null.c                                       :+:      :+:    :+:   */
+/*   check_exeception.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 20:46:14 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:51:43 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/02 19:01:10 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "push_swap.h"
+#include "libft.h"
 
-int	ft_is_null(void *mem)
+static void	check_argc(int argc)
 {
-	if (mem == NULL)
-		return (1);
-	return (0);
+	if (argc < 2)
+		exit(0);
+}
+
+void	check_exeception(int argc, char **argv)
+{
+	int	i;
+
+	check_argc(argc);
+	i = 0;
+	argv++;
+	while (*argv)
+	{
+		while ((*argv)[i])
+		{
+			if (ft_isspace((*argv)[i]))
+			{
+				i++;
+				continue ;
+			}
+			check_error(E_IS_NUM, ft_isdigit((*argv)[i]));
+			i++;
+		}
+		argv++;
+	}
+	ft_putstr_fd("Success", 1);
 }

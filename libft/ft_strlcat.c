@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2021/11/24 13:47:03 by jayoon            #+#    #+#             */
+/*   Updated: 2022/01/06 21:14:15 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-int	ft_putstr_fd(char *s, int fd)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	len;
+	size_t	dstlen;
+	size_t	srclen;
 
-	if (!s)
-		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (dstlen < dstsize)
+	{
+		while (*dst)
+			dst++;
+		while (*src && dstsize - dstlen - 1)
+		{
+			*dst++ = *src++;
+			dstsize--;
+		}
+		*dst = '\0';
+		return (dstlen + srclen);
+	}
+	return (srclen + dstsize);
 }

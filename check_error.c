@@ -6,11 +6,12 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 21:12:38 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 20:52:07 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/02 18:02:11 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "libft.h"
 
 void	check_error(t_error e, long long data)
 {

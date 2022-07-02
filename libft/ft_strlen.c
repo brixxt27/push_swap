@@ -5,20 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/01 17:16:06 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/01 17:17:19 by jayoon           ###   ########.fr       */
+/*   Created: 2021/11/19 15:33:30 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/02 16:00:27 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	i;
 
-	if (!str)
+	if (!s)
 		return (0);
-	while (*str++)
-		len++;
-	return (len);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

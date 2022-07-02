@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2021/11/30 23:13:39 by jayoon            #+#    #+#             */
+/*   Updated: 2022/06/22 21:28:38 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-int	ft_putstr_fd(char *s, int fd)
+char	*ft_strdup(const char *s1)
 {
-	int	len;
+	size_t	len;
+	char	*buf;
 
-	if (!s)
-		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
+	if (!s1)
+		return (NULL);
+	len = ft_strlen(s1);
+	buf = (char *)malloc(len + 1);
+	if (!buf)
+		return (NULL);
+	ft_strlcpy(buf, s1, len + 1);
+	return (buf);
 }

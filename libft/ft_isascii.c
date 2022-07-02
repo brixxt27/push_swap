@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2021/11/19 14:59:41 by jayoon            #+#    #+#             */
+/*   Updated: 2021/12/12 13:21:36 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
-
-int	ft_putstr_fd(char *s, int fd)
+int	ft_isascii(int c)
 {
-	int	len;
-
-	if (!s)
+	if (0 <= c && c <= 127)
+		return (1);
+	else
 		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
 }

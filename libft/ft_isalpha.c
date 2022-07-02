@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2021/11/18 18:54:51 by jayoon            #+#    #+#             */
+/*   Updated: 2021/12/12 13:21:22 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
-
-int	ft_putstr_fd(char *s, int fd)
+int	ft_isalpha(int c)
 {
-	int	len;
-
-	if (!s)
+	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
+		return (1);
+	else
 		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
 }

@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 17:10:35 by jayoon            #+#    #+#             */
-/*   Updated: 2022/02/26 02:06:06 by jayoon           ###   ########.fr       */
+/*   Created: 2022/01/11 17:15:21 by jayoon            #+#    #+#             */
+/*   Updated: 2022/01/11 17:25:22 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-int	ft_putstr_fd(char *s, int fd)
+void	ft_putnbr_fd_recursive(long int n, int fd)
 {
-	int	len;
+	if (n > 9)
+		ft_putnbr_fd_recursive(n / 10, fd);
+	ft_putchar_fd('0' + (n % 10), fd);
+}
 
-	if (!s)
-		return (0);
-	len = write(fd, s, ft_strlen(s));
-	return (len);
+void	ft_putnbr_fd(int n, int fd)
+{
+	long int	long_n;
+
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		long_n = (long int)n * (-1);
+	}
+	else
+		long_n = n;
+	ft_putnbr_fd_recursive(long_n, fd);
 }
