@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:25:50 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/02 17:57:36 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/02 21:49:25 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef enum e_is_delimeter
 	DEL_NO,
 }	t_delimeter;
 
+int			ft_atoi(const char *str);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -49,7 +50,6 @@ int			ft_strncmp(const char *s1, const char *s, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *s1, const char *set, size_t n);
-int			ft_atoi(const char *s);
 void		*ft_calloc(size_t cnt, size_t n);
 char		*ft_strdup(const char *s);
 
