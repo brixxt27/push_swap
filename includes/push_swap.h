@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/02 17:53:55 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/05 16:18:00 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,21 @@ typedef struct s_stack_using_linked_list
 
 typedef enum e_error
 {
-	E_IS_NUM
+	E_IS_NOT_NUM,
+	E_SIGN
 }	t_error;
+
+typedef enum e_parse
+{
+	P_NUM,
+	P_SIGN
+}	t_parse;
+
+enum e_bool
+{
+	FALSE,
+	TRUE
+};
 
 // check_exeception.c
 void	check_exeception(int argc, char **argv);

@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/05 14:55:15 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/05 16:01:39 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int argc, char *argv[])
 {
 	// 예외처리
-	check_exeception(argc, argv);
+	// check_exeception(argc, argv);
 	// parsing
 	// 연결 리스트에 저장
 	// 정렬
