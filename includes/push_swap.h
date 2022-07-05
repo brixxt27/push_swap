@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/05 16:18:00 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:25:39 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ typedef enum e_parse
 	P_SIGN
 }	t_parse;
 
-enum e_bool
+typedef enum e_bool
 {
 	FALSE,
 	TRUE
-};
+}	t_bool;
 
 // check_exeception.c
 void	check_exeception(int argc, char **argv);

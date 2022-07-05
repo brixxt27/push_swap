@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/05 16:21:51 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:30:03 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ static void	check_argc(int argc)
 {
 	if (argc < 2)
 		exit(0);
+}
+
+static void	pass_space(char *str, int *pi)
+{
+	while (str[*pi] == ' ')
+		*pi++;
 }
 
 void	check_exeception(int argc, char **argv)
@@ -30,13 +36,12 @@ void	check_exeception(int argc, char **argv)
 	i = 0;
 	flag = P_NUM;
 	++argv;
-	while (argv)
+	while (*argv)
 	{
 		while ((*argv)[i])
 		{
-			// 공백이면 다음 문자로 이동
-			if (is_space(*argv, &i) == TRUE)
-				continue ;
+			// 모든 공백 다 넘기기
+			pass_space(*argv, &i);
 			/*
 			부호면
 				다음 문자 확인하고 숫자가 아닐 시 에러
@@ -47,14 +52,9 @@ void	check_exeception(int argc, char **argv)
 			숫자면
 				
 			*/
-			if ((*argv)[i] == ' ')
-			{
-				i++;
-				continue ; // 또는 flag 사용
-			}
 			if ((*argv)[i] == '+' || (*argv)[i] == '-')
 			{
-				if (!ft_isdigit((*argv)[i + 1]) || flag == P_SIGN)
+				if (!ft_isdigit((*argv)[i + 1]))
 					check_error(E_IS_NOT_NUM, 0);
 				start = &(*argv)[i];
 				flag = P_SIGN;
