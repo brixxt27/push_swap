@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/05 18:30:03 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/05 20:11:40 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,24 +40,27 @@ void	check_exeception(int argc, char **argv)
 	{
 		while ((*argv)[i])
 		{
-			// 모든 공백 다 넘기기
 			pass_space(*argv, &i);
-			/*
-			부호면
-				다음 문자 확인하고 숫자가 아닐 시 에러
+
+			// psudo code
+			모든 공백 다 넘기기
+			if 부호
+				if 다음 문자 숫자 아님?
+					exit
 				start = 현재 문자 주소
+				flag = P_SPACE
 				i++
-			*/
-			/*
-			숫자면
+			start 와 end 에 문자열 주소 담기(end 에는 NUL 또는 끝 문자의 주소를 담아야 한다)
+			if 숫자
+				if flag != P_SPACE
+					start = 현재 문자 주소
+
 				
-			*/
 			if ((*argv)[i] == '+' || (*argv)[i] == '-')
 			{
 				if (!ft_isdigit((*argv)[i + 1]))
 					check_error(E_IS_NOT_NUM, 0);
 				start = &(*argv)[i];
-				flag = P_SIGN;
 				i++;
 			}
 		}
