@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/05 20:11:40 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/06 20:05:35 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,16 @@ void	check_exeception(int argc, char **argv)
 			// psudo code
 			모든 공백 다 넘기기
 			if 부호
-				if 다음 문자 숫자 아님?
+				if 다음 숫자 아님?
 					exit
 				start = 현재 문자 주소
-				flag = P_SPACE
+				// flag = P_SPACE
 				i++
 			start 와 end 에 문자열 주소 담기(end 에는 NUL 또는 끝 문자의 주소를 담아야 한다)
 			if 숫자
 				if flag != P_SPACE
 					start = 현재 문자 주소
+				flag = P_NUM
 
 				
 			if ((*argv)[i] == '+' || (*argv)[i] == '-')
