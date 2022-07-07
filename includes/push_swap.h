@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/05 18:25:39 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/07 21:16:43 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ typedef enum e_error
 
 typedef enum e_parse
 {
-	P_NUM,
-	P_SIGN
+	P_STR,
+	P_END_OF_STR
 }	t_parse;
 
 typedef enum e_bool
