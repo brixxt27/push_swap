@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/07 21:34:19 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/07 21:37:45 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	check_argc(int argc)
 }
 
 // 공백을 다 넘기는 구조는 빠를지 몰라도, 구조상 보기 안 좋다.
+
 static t_parse	check_end_of_string(char *str, int i, t_parse flag,\
 									char **pend)
 {
