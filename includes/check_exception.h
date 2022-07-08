@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   check_exception.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/08 16:49:08 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/08 16:43:52 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/08 17:38:56 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef EXCEPT_H
+# define EXCEPT_H
 
-# include <stdlib.h>
-
-typedef struct s_node
+typedef enum e_parse
 {
-	int				value;
-	struct s_list	*prev;
-	struct s_list	*next;
-}	t_node;
+	P_STR,
+	P_END_OF_STR
+}	t_parse;
 
-typedef struct s_stack_using_linked_list
+typedef struct s_end_of_string
 {
-	int		num_node;
-	t_node	*head;
-	t_node	*tail;
-}	t_stack;
+	char	*start;
+	char	*end;
+}	t_eos;
 
-typedef enum e_bool
-{
-	FALSE,
-	TRUE
-}	t_bool;
+void	check_exception(int argc, char **argv);
 
 #endif

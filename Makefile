@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/02 18:44:53 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/08 18:10:31 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,14 +23,11 @@ INCS_DIR 	= includes
 LIBFT_DIR	= libft
 LIBFT		= libft.a
 
-# libft 정적 라이브러리를 사용할 예정
-# LIBFT_SRCS	=	$(addprefix $(LIBFT_DIR)/,\
-# 				)
 # SRCS		= 	$(addprefix $(SRCS_DIR)/,\
 # 				)
 SRCS		= 	$(addprefix ./,\
 				main.c\
-				check_exeception.c\
+				check_exception.c\
 				check_error.c)
 # B_SRCS		=	$(addprefix $(B_SRCS_DIR)/,\
 # 				)

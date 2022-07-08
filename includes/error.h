@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   error.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/08 16:49:08 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/08 16:48:29 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/08 16:49:05 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef ERROR_H
+# define ERROR_H
 
-# include <stdlib.h>
-
-typedef struct s_node
+typedef enum e_error
 {
-	int				value;
-	struct s_list	*prev;
-	struct s_list	*next;
-}	t_node;
+	E_IS_NOT_NUM,
+	E_SIGN
+}	t_error;
 
-typedef struct s_stack_using_linked_list
-{
-	int		num_node;
-	t_node	*head;
-	t_node	*tail;
-}	t_stack;
-
-typedef enum e_bool
-{
-	FALSE,
-	TRUE
-}	t_bool;
+void	check_error(t_error e, long long data);
 
 #endif
