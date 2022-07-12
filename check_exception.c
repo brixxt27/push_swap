@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/08 18:28:24 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/12 21:37:52 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	check_exception(int argc, char **argv)
 			if (flag == P_END_OF_STR && i > 0 && ft_isdigit((*argv)[i - 1]))
 			// 새로운 문자열 만들어야 함, nkim 님은 realloc 이라 표현 하더라
 			// nheo 님 덕분에 substr 이라는 친구 찾음 ㅎㅎ
-				ft_strlcpy(str_atoi, &(*argv)[i], end - start); 
+				ret_substr = ft_substr(str_atoi, &(*argv)[i], end - start); 
 				ret_atoi = ft_atoi();
 
 			// 부호 체크

@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:25:50 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/02 21:49:25 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/12 21:29:16 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ typedef enum e_is_delimeter
 	DEL_YES,
 	DEL_NO,
 }	t_delimeter;
+
+typedef struct s_utils_substr
+{
+	char	*dst;
+	char	*src;
+}	t_str;
 
 int			ft_atoi(const char *str);
 int			ft_isalnum(int c);
