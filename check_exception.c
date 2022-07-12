@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/12 21:37:52 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/12 21:59:20 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,11 @@ static void	init_utils_for_exception(int *pi, t_parse *pflag, \
 	peos->end = NULL;
 }
 
-static t_parse	check_end_of_string(char *str, int i, t_parse flag,\
-									char **pend)
+static int	ft_issign(char c)
 {
-	t_parse	ret;
-	int		next;
-
-	ret = flag;
-	next = i + 1; 
-	if (ft_isdigit(str[i]) && str[next] == ' ' || str[next] == '\0')
-	{
-		ret = P_END_OF_STR;
-		*pend = &str[next];
-	}
-	return (ret);
+	if (c == '+' || c == '-')
+		return (1);
+	return (0);
 }
 
 void	check_exception(int argc, char **argv)
@@ -60,8 +51,16 @@ void	check_exception(int argc, char **argv)
 	{
 		while ((*argv)[i]) // NUL 이 안 들어옴. 앞 문자가 NUL 인지 공백인지 확인해야 함.
 		{
-			flag = check_end_of_string(*argv, i, flag, &end);
-			parse
+			if (ft_isdigit((*argv)[i]))
+			{
+				if (flag == P_END_OF_STR)
+					start = &(*argv)[i];
+				else if ((*argv)[i] == ' ' || (*argv)[i] == '\0')
+					end = &(*argv)[i];
+			}
+			else if (ft_issign((*argv([i]))) && ft_isdigit((*argv)[i + 1]))
+				start = &(*argv)[i];
+			// flag = check_end_of_string(*argv, i, flag, &end);
 
 			// psudo code
 /*
@@ -124,5 +123,23 @@ void	check_exception(int argc, char **argv)
 		argv++;
 	}
 	ft_putstr_fd("Success", 1);
+
+
+static t_parse	check_end_of_string(char *str, int i, t_parse flag,\
+									char **pend)
+{
+	t_parse	ret;
+	int		next;
+
+	ret = flag;
+	next = i + 1; 
+	if (ft_isdigit(str[i]) && str[next] == ' ' || str[next] == '\0')
+	{
+		ret = P_END_OF_STR;
+		*pend = &str[next];
+	}
+	return (ret);
+}
+
 */
 }
