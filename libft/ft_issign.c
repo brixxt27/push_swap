@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.h                                            :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 16:48:29 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/12 22:22:30 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/12 22:52:54 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/12 22:54:13 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ERROR_H
-# define ERROR_H
-
-typedef enum e_error
+int	ft_issign(int c)
 {
-	E_EXCEPTION
-}	t_error;
-
-void	check_error(t_error e, long long data);
-void	print_error(void);
-
-#endif
+	if (c == '+' || c == '-')
+		return (1);
+	return (0);
+}

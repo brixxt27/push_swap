@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 18:08:18 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/02 17:57:23 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/12 22:54:41 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS =		ft_isalnum.c \
 			ft_isdigit.c \
 			ft_isprint.c \
 			ft_isspace.c \
+			ft_issign.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_strchr.c \
