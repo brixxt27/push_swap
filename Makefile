@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/08 18:10:31 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/13 20:11:45 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ LIBFT		= libft.a
 SRCS		= 	$(addprefix ./,\
 				main.c\
 				check_exception.c\
-				check_error.c)
+				error.c\
+				error.c)
 # B_SRCS		=	$(addprefix $(B_SRCS_DIR)/,\
 # 				)
 LIBFT_OBJS	= $(LIBFT_SRCS:.c=.o)
@@ -48,12 +49,12 @@ endif
 all: $(NAME)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -I $(INCS_DIR) -c $^ -o $@
+	$(CC) $(CFLAGS) -I $(INCS_DIR) -I $(LIBFT_DIR) -c $^ -o $@
 
 $(NAME): $(OBJECTS)
 	@make bonus -C $(LIBFT_DIR)
 	@cp $(LIBFT_DIR)/$(LIBFT) ./
-	$(CC) $(CFLAGS) -I $(INCS_DIR) -o $@ $^ $(LIBFT)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBFT)
 
 debug: 
 	$(MAKE) DEBUG_FLAG=1 all

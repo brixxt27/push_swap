@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 16:48:29 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/12 22:22:30 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/13 17:19:15 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 typedef enum e_error
 {
-	E_EXCEPTION
+	E_SYS_CALL
 }	t_error;
 
 void	check_error(t_error e, long long data);
