@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/13 21:35:16 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/13 22:05:06 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,20 @@
 #include "push_swap.h"
 #include "libft.h"
 
-static void	do_it_at_digit(t_stat *pflag, t_eos *peos, char *str, int i)
+static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
+										int i)
 {
 	if (ft_issign(str[i + 1]))
 		print_error();
 	if (*pflag == P_END)
 		peos->start = &str[i];
 	else if (str[i + 1] == ' ' || str[i + 1] == '\0')
+	{
 		peos->end = &str[i];
+		// substr 으로 문자열 뽑아내기
+		// atoi 로 int 자료형인지 확인하기
+		// linked list tail 쪽에 push 하면서 중복 검사
+	}
 	*pflag = P_NOT_END;
 }
 
@@ -62,7 +68,7 @@ void	check_exception_and_parse(char **argv)
 		while ((*argv)[i])
 		{
 			if (ft_isdigit((*argv)[i]))
-				do_it_at_digit(&flag, &eos, *argv, i);
+				do_it_at_digit_and_parse(&flag, &eos, *argv, i);
 			else if (ft_issign((*argv)[i]))
 				do_it_at_sign(&flag, &eos, *argv, i);
 			else if (ft_isspace((*argv)[i]))
