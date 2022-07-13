@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/13 22:05:06 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/13 22:10:48 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 										int i)
 {
+	char	*ret_substr;
+
 	if (ft_issign(str[i + 1]))
 		print_error();
 	if (*pflag == P_END)
@@ -25,6 +27,7 @@ static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 	else if (str[i + 1] == ' ' || str[i + 1] == '\0')
 	{
 		peos->end = &str[i];
+		ret_substr = ft_substr(str, )
 		// substr 으로 문자열 뽑아내기
 		// atoi 로 int 자료형인지 확인하기
 		// linked list tail 쪽에 push 하면서 중복 검사
