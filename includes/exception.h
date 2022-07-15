@@ -6,15 +6,12 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 16:43:52 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/14 15:46:53 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/15 15:50:53 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EXCEPTION_H
 # define EXCEPTION_H
-
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
 
 typedef enum e_status_of_char
 {
