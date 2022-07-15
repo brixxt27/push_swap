@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:25:50 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 15:50:46 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:14:01 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define INT_MIN -2147483648
 
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -46,6 +47,7 @@ int			ft_isascii(int c);
 int			ft_isprint(int c);
 int			ft_isspace(int c);
 int			ft_issign(int c);
+int			ft_isint(ssize_t num);
 size_t		ft_strlen(const char *s);
 void		*ft_memset(void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);

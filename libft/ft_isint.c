@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_isint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 21:12:38 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 19:15:57 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/15 17:13:29 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/15 17:15:54 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
 #include "libft.h"
-#include "error.h"
 
-void	check_error(t_error e, long long data)
+int	ft_isint(ssize_t num)
 {
-	if ((e == E_SYS_CALL && data == -1))
-	{
-		ft_putstr_fd("System call error!\n", 2);
-		exit(1);
-	}
-	else if (e == E_LIBFT && data == 0)
-	{
-		ft_putstr_fd("Libft error!\n", 2);
-		exit(1);
-	}
-}
-
-void	print_error(void)
-{
-	ft_putstr_fd("Error\n", 2);
-	exit(1);
+	if (num <= INT_MAX || num >= INT_MIN)
+		return (1);
+	return (0);
 }

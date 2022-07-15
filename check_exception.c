@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 15:09:38 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/15 20:38:10 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,27 @@ static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 										int i)
 {
 	char	*ret_substr;
-	ssize_t	ret_atol;
+	// ssize_t	ret_atol;
 
 	if (ft_issign(str[i + 1]))
 		print_error();
 	if (*pflag == P_END)
 		peos->start = &str[i];
-	else if (str[i + 1] == ' ' || str[i + 1] == '\0')
+	if (str[i + 1] == ' ' || str[i + 1] == '\0')
 	{
 		peos->end = &str[i];
 		ret_substr = ft_substr(str, i - (peos->end - peos->start), peos->end \
 								- peos->start + 1);
-		check_error(E_LIBFT, ret_substr);
-		ret_atol = ft_atol(ret_substr);
-		if (!ft_isint(ret_atol))
-			print_error();
-		check_double_and_index()
-		// atol 로 int 자료형인지 확인하기
-			// atol 로 변환
-			// return 이 int 값인지 확인
-				// 아니면 print error
-		// linked list tail 쪽에 push 하면서 중복 검사 및 indexing
-			// head 부터 쭉 검사
-			// 크기 비교하며 indexing 함
-			// tail 만날 때나 node 의 개수만큼 다 돈다면 push
+		check_error(E_LIBFT, (long long)ret_substr);
+		ft_putendl_fd(ret_substr, 1);
+		free(ret_substr);
+		// ret_atol = ft_atol(ret_substr);
+		// if (!ft_isint(ret_atol))
+		// 	print_error();
+		// check_double_and_index()
+		// if (!)
+		// 	print_error();
+		// push()
 	}
 	*pflag = P_NOT_END;
 }

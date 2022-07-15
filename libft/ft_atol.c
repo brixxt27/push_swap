@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:09:43 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 15:42:43 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/15 19:18:13 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,23 @@ static void	init_utils(ssize_t *p_result, int *p_sign)
 
 static const char	*pass_space(const char *str)
 {
-	whlie (ft_isspace(*str))
+	while (ft_isspace(*str))
 		str++;
+	return (str);
 }
 
 static const char	*check_sign(const char *str, int *p_sign)
 {
-	if (ft_issign(*sign))
+	if (ft_issign(*p_sign))
 	{
 		if (*str == '-')
-			p_sign *= -1;
+			*p_sign *= -1;
 		str++;
 	}
+	return (str);
 }
 
-static void	do_atol(const char *str, int *p_result)
+static void	do_atol(const char *str, ssize_t *p_result)
 {
 	while (ft_isdigit(*str))
 	{
