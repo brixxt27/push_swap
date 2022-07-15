@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   operations_about_stack.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 21:00:15 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/15 21:33:07 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exception.h"
+#include "error.h"
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+void	init_stack(t_stack *ps)
 {
-	t_stack	a;
-	t_stack b;
-
-	if (argc < 2)
-		exit(0);
-	init_stack(&a);
-	init_stack(&b);
-	check_exception_and_parse(argv);
-	// parsing
-	// 연결 리스트에 저장
-	// 정렬
-	// print
-	return (0);
+	ps = malloc(sizeof(t_stack));
+	check_error(E_SYS_CALL, (long long)ps);
+	ps->size = 0;
+	ps->top = NULL;
+	ps->bottom = NULL;
 }

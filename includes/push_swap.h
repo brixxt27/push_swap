@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/13 16:47:37 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/15 21:19:03 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 
 # include <stdlib.h>
 
-typedef struct s_node
+typedef struct s_list
 {
-	int				value;
-	struct s_list	*prev;
+	int				index;
+	int				data;
 	struct s_list	*next;
-}	t_node;
+	struct s_list	*prev;
+}	t_list;
 
-typedef struct s_stack_using_linked_list
+typedef struct s_stack
 {
-	int		num_node;
-	t_node	*head;
-	t_node	*tail;
+	int		size;
+	t_list	*top;
+	t_list	*bottom;
 }	t_stack;
 
 typedef enum e_bool
