@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/16 19:14:59 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/16 21:08:59 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 	if (*(str + 1) == ' ' || *(str + 1) == '\0')
 	{
 		peos->end = str;
-		ret_substr = ft_substr(str, 0, peos->end - peos->start + 1);
+		ret_substr = ft_substr(peos->start, 0, peos->end - peos->start + 1);
 		check_error(E_LIBFT, (long long)ret_substr);
 		ft_putendl_fd(ret_substr, 1);
 		free(ret_substr);
