@@ -6,13 +6,13 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:13:56 by jayoon            #+#    #+#             */
-/*   Updated: 2022/06/29 20:34:53 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/16 19:13:29 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_list *a_stack, t_list *b_stack)
+void	ra(t_node *a_stack, t_node *b_stack)
 {
-	t_list	*temp;
+	t_node	*temp;
 }

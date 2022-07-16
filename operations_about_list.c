@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:32:21 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 21:33:09 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/16 19:13:29 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	first_list_next(t_stack *ps, int data)
 {
-	t_list	*node;
+	t_node	*node;
 
-	node = malloc(sizeof(t_list));
+	node = malloc(sizeof(t_node));
 	check_error(E_SYS_CALL, (long long)node);
 	node->data = data;
 	node->index = 0;
@@ -28,9 +28,9 @@ void	first_list_next(t_stack *ps, int data)
 
 void	list_next(t_stack *ps, int data)
 {
-	t_list	*node;
+	t_node	*node;
 
-	node = malloc(sizeof(t_list));
+	node = malloc(sizeof(t_node));
 	check_error(E_SYS_CALL, (long long)node);
 	node->data = data;
 	node->index = 0;

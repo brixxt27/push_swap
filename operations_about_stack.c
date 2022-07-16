@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 21:33:07 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/16 19:13:29 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,13 @@ void	init_stack(t_stack *ps)
 	ps->size = 0;
 	ps->top = NULL;
 	ps->bottom = NULL;
+}
+
+// ps->top == NULL
+void	first_push(t_stack *ps, t_node *node)
+{
+	ps->top = node;
+	ps->bottom = node;
+	ps->size = 1;
+
 }
