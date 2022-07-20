@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/16 19:16:15 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 20:03:20 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	main(int argc, char *argv[])
 	// init_stack(&a);
 	// init_stack(&b);
 	check_exception_and_parse(argv, &a);
-	// parsing
-	// 연결 리스트에 저장
 	// 정렬
 	// print
 	return (0);

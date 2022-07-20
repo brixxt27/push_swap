@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/16 21:08:59 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 20:05:50 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 										t_stack *a)
 {
 	char	*ret_substr;
-	// ssize_t	ret_atol;
+	ssize_t	ret_atol;
 
 	if (ft_issign(*(str + 1)))
 		print_error();
@@ -30,16 +30,9 @@ static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 		peos->end = str;
 		ret_substr = ft_substr(peos->start, 0, peos->end - peos->start + 1);
 		check_error(E_LIBFT, (long long)ret_substr);
-		ft_putendl_fd(ret_substr, 1);
+		ret_atol = atol_and_check_int();
+		check_duplication_and_sorting_and_index();
 		free(ret_substr);
-		a = NULL;
-		// ret_atol = ft_atol(ret_substr);
-		// if (!ft_isint(ret_atol))
-		// 	print_error();
-		// check_double_and_index()
-		// if (!)
-		// 	print_error();
-		// push()
 	}
 	*pflag = P_NOT_END;
 }
