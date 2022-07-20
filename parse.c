@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 22:57:10 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 23:19:39 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,12 @@ static void	do_it_at_digit(t_stat *pflag, t_eos *peos, char *str, \
 		ret_substr = ft_substr(peos->start, 0, peos->end - peos->start + 1);
 		check_error(E_LIBFT, (long long)ret_substr);
 		ret_atol = atol_and_check_int(ret_substr);
-		check_exception_and_index(a, (int)ret_atol);
 		free(ret_substr);
+		if (a->top == NULL) // 이거 NULL 로 초기화 된 거임?
+			first_list_next(a, (int)ret_atol);
+		else
+			list_next(a, (int)ret_atol);
+		check_exception_and_index(a, (int)ret_atol);
 	}
 	*pflag = P_NOT_END;
 }
