@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/20 21:29:42 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/20 22:44:06 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ SRCS		= 	$(addprefix ./,\
 				parse.c\
 				error.c\
 				error.c\
-				atol_and_check_int.c
+				atol_and_check_int.c\
+				operation_about_list.c\
+				operation_about_stack.c
 				)
 # B_SRCS		=	$(addprefix $(B_SRCS_DIR)/,\
 # 				)
