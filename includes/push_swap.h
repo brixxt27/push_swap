@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 22:23:23 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 22:37:58 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_linked_list
 	struct s_linked_list	*prev;
 }	t_node;
 
-typedef struct s_stack
+typedef struct s_stack_using_deque
 {
 	int		size;
 	t_node	*top;
