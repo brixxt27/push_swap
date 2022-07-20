@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 21:45:56 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 22:57:10 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	do_it_at_digit(t_stat *pflag, t_eos *peos, char *str, \
 		ret_substr = ft_substr(peos->start, 0, peos->end - peos->start + 1);
 		check_error(E_LIBFT, (long long)ret_substr);
 		ret_atol = atol_and_check_int(ret_substr);
-		check_exception_and_index(a);
+		check_exception_and_index(a, (int)ret_atol);
 		free(ret_substr);
 	}
 	*pflag = P_NOT_END;

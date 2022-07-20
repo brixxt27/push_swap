@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 16:48:29 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 21:13:47 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 23:04:34 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 typedef enum e_error
 {
 	E_SYS_CALL,
+	E_MALLOC,
 	E_LIBFT
 }	t_error;
 

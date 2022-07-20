@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 22:30:43 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 23:07:22 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	init_stack(t_stack *ps)
 {
 	ps = malloc(sizeof(t_stack));
-	check_error(E_SYS_CALL, (long long)ps);
+	check_error(E_MALLOC, (long long)ps);
 	ps->size = 0;
 	ps->top = NULL;
 	ps->bottom = NULL;
