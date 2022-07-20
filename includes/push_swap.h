@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/16 19:13:29 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 22:23:23 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ typedef enum e_bool
 }	t_bool;
 
 void	init_stack(t_stack *ps);
+void	first_push(t_stack *ps, t_node *node);
+void	push(t_stack *ps, t_node *node);
+t_node	pop(t_stack *ps);
 
 #endif

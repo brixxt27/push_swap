@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_exception_and_index.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 21:33:05 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/20 21:23:08 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/20 22:31:02 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parse.h"
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+void	check_exception_and_index(t_stack *a)
 {
-	t_stack	a;
-	// t_stack b;
+	while ()
+	// 중복 검사
+	// 이미 정렬 -> 정상 종료
+	// index
 
-	if (argc < 2)
-		exit(0);
-	// init_stack(&a);
-	// init_stack(&b);
-	parse(argv, &a);
-	// 정렬
-	// print
-	return (0);
 }

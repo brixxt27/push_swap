@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parse.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 21:33:05 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/08 16:43:52 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/20 21:31:30 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parse.h"
-#include "push_swap.h"
+#ifndef PARSE_H
+# define PARSE_H
 
-int	main(int argc, char *argv[])
+# include "push_swap.h"
+
+typedef enum e_status_of_char
 {
-	t_stack	a;
-	// t_stack b;
+	P_NOT_END,
+	P_END
+}	t_stat;
 
-	if (argc < 2)
-		exit(0);
-	// init_stack(&a);
-	// init_stack(&b);
-	parse(argv, &a);
-	// 정렬
-	// print
-	return (0);
-}
+typedef struct s_end_of_string
+{
+	char	*start;
+	char	*end;
+}	t_eos;
+
+void	parse(char **argv, t_stack *a);
+ssize_t	atol_and_check_int(char *str);
+
+#endif

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_exception.c                                  :+:      :+:    :+:   */
+/*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 20:05:50 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/20 21:45:56 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exception.h"
+#include "parse.h"
 #include "error.h"
 #include "push_swap.h"
 #include "libft.h"
 
-static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
+static void	do_it_at_digit(t_stat *pflag, t_eos *peos, char *str, \
 										t_stack *a)
 {
 	char	*ret_substr;
@@ -30,8 +30,8 @@ static void	do_it_at_digit_and_parse(t_stat *pflag, t_eos *peos, char *str, \
 		peos->end = str;
 		ret_substr = ft_substr(peos->start, 0, peos->end - peos->start + 1);
 		check_error(E_LIBFT, (long long)ret_substr);
-		ret_atol = atol_and_check_int();
-		check_duplication_and_sorting_and_index();
+		ret_atol = atol_and_check_int(ret_substr);
+		check_exception_and_index(a);
 		free(ret_substr);
 	}
 	*pflag = P_NOT_END;
@@ -51,7 +51,7 @@ static void	do_it_at_space(t_stat *pflag)
 	*pflag = P_END;
 }
 
-static void	init_utils_for_exception(int *pi, t_stat *pflag, \
+static void	init_utils_for_parse(int *pi, t_stat *pflag, \
 										t_eos *peos)
 {
 	*pi = 0;
@@ -60,7 +60,7 @@ static void	init_utils_for_exception(int *pi, t_stat *pflag, \
 	peos->end = NULL;
 }
 
-void	check_exception_and_parse(char **argv, t_stack *a)
+void	parse(char **argv, t_stack *a)
 {
 	int		i;
 	t_stat	flag;
@@ -69,11 +69,11 @@ void	check_exception_and_parse(char **argv, t_stack *a)
 	++argv;
 	while (*argv)
 	{
-		init_utils_for_exception(&i, &flag, &eos);
+		init_utils_for_parse(&i, &flag, &eos);
 		while ((*argv)[i])
 		{
 			if (ft_isdigit((*argv)[i]))
-				do_it_at_digit_and_parse(&flag, &eos, &(*argv)[i], a);
+				do_it_at_digit(&flag, &eos, &(*argv)[i], a);
 			else if (ft_issign((*argv)[i]))
 				do_it_at_sign(&flag, &eos, *argv, i);
 			else if (ft_isspace((*argv)[i]))

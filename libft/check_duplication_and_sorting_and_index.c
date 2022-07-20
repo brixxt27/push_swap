@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exception.h                                        :+:      :+:    :+:   */
+/*   check_duplication_and_sorting_and_index.c          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 16:43:52 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/16 21:07:15 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/20 21:23:08 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/20 21:37:23 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EXCEPTION_H
-# define EXCEPTION_H
-
-# include "push_swap.h"
-
-typedef enum e_status_of_char
+void	check_exception_and_index()
 {
-	P_NOT_END,
-	P_END
-}	t_stat;
 
-typedef struct s_end_of_string
-{
-	char			*start;
-	char			*end;
-}	t_eos;
-
-void	check_exception_and_parse(char **argv, t_stack *a);
-
-#endif
+}

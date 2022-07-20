@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/13 20:11:45 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/20 21:29:42 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,11 @@ LIBFT		= libft.a
 # 				)
 SRCS		= 	$(addprefix ./,\
 				main.c\
-				check_exception.c\
+				parse.c\
 				error.c\
-				error.c)
+				error.c\
+				atol_and_check_int.c
+				)
 # B_SRCS		=	$(addprefix $(B_SRCS_DIR)/,\
 # 				)
 LIBFT_OBJS	= $(LIBFT_SRCS:.c=.o)
