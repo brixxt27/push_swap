@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 17:13:29 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/15 17:15:54 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:00:12 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isint(ssize_t num)
 {
-	if (num <= INT_MAX || num >= INT_MIN)
+	if (num <= INT_MAX && num >= INT_MIN)
 		return (1);
 	return (0);
 }

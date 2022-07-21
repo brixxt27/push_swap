@@ -6,27 +6,26 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 21:23:08 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 23:19:27 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/21 16:57:12 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "error.h"
 
-void	check_exception_and_index(t_stack *a, int data)
+void	check_duplication_and_index(t_stack *a, int data)
 {
-	t_node	*head;
-	t_node	*node;
+	t_node	*curr;
 
-	head = a->top;
-	while (head->next)
+	curr = a->top;
+	while (curr->next)
 	{
-		if (head->data == data)
+		if (curr->data == data)
 			print_error();
-		if (head->data )
-		head = head->next;
+		if (curr->data > data)
+			curr->index++;
+		else if (curr->data < data)
+			a->bottom->index++;
+		curr = curr->next;
 	}
-	// 이미 정렬 -> 정상 종료
-	// index
-
 }

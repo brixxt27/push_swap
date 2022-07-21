@@ -6,20 +6,23 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/20 23:07:22 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/21 16:42:34 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "error.h"
 #include "push_swap.h"
 
-void	init_stack(t_stack *ps)
+t_stack	*init_stack(void)
 {
-	ps = malloc(sizeof(t_stack));
-	check_error(E_MALLOC, (long long)ps);
-	ps->size = 0;
-	ps->top = NULL;
-	ps->bottom = NULL;
+	t_stack	*stack;
+
+	stack = malloc(sizeof(t_stack));
+	check_error(E_MALLOC, (long long)stack);
+	stack->size = 0;
+	stack->top = NULL;
+	stack->bottom = NULL;
+	return (stack);
 }
 
 void	first_push(t_stack *ps, t_node *node)
@@ -40,7 +43,7 @@ void	push(t_stack *ps, t_node *node)
 	ps->size++;
 }
 
-t_node	pop(t_stack *ps)
+t_node	*pop(t_stack *ps)
 {
 	t_node	*node;
 
