@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/21 17:00:56 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:16:26 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ static void	print_stack(t_stack *a)
 int	main(int argc, char *argv[])
 {
 	t_stack	*a;
-	// t_stack *b;
+	t_stack *b;
 
 	if (argc < 2)
 		exit(0);
 	a = init_stack();
-	// b = init_stack();
+	b = init_stack();
 	parse(argv, a);
 	check_order(a);
 	// 정렬
