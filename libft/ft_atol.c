@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:09:43 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/21 20:51:26 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/21 21:28:33 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ static const char	*pass_space(const char *str)
 
 static const char	*check_sign(const char *str, int *p_sign)
 {
-	if (ft_issign(*p_sign))
+	if (ft_issign(*str))
 	{
 		if (*str == '-')
-			*p_sign *= -1;
+			*p_sign = -1;
 		str++;
 	}
 	return (str);
