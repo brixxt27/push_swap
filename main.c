@@ -6,20 +6,21 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/21 21:52:28 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 19:48:46 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse.h"
 #include "push_swap.h"
 
+// 아래 지우기
 #include <stdio.h>
-static void	print_stack(t_stack *a)
+static void	print_stack(t_stack *a, char c)
 {
 	t_node	*curr;
 
 	curr = a->top;
-	printf("stack A : \n");
+	printf("stack %c : \n", c);
 	while (curr)
 	{
 		printf("%d\n", curr->data);
@@ -38,8 +39,12 @@ int	main(int argc, char *argv[])
 	b = init_stack();
 	parse(argv, a);
 	check_order(a);
-	// 정렬
-	print_stack(a);
+	if (a->size < 6)
+		less_than_five(a, b);
+	// else
+	// 	sort();
+	print_stack(a, 'A');
+	print_stack(b, 'B');
 	free_stack(a);
 	free_stack(b);
 	return (0);

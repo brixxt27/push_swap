@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:09:43 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/21 21:28:33 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 17:04:50 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ ssize_t	ft_atol(const char *str)
 	str = pass_space(str);
 	str = check_sign(str, &sign);
 	len = do_atol(str, &result);
-	// if (len > 19 && sign == 1)
-	// 	return ((ssize_t)INT_MAX + 1);
-	// else if (len > 19 && sign == -1)
-	// 	return ((ssize_t)INT_MIN - 1);
+	if (len > 19 && sign == 1)
+		return ((ssize_t)INT_MAX + 1);
+	else if (len > 19 && sign == -1)
+		return ((ssize_t)INT_MIN - 1);
 	return ((ssize_t)sign * result);
 }

@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:52:25 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/21 17:09:31 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 17:02:30 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ static void	do_it_at_digit(t_stat *pflag, t_eos *peos, char *str, \
 		check_error(E_LIBFT, (long long)ret_substr);
 		ret_atol = atol_and_check_int(ret_substr);
 		free(ret_substr);
-		if (a->top == NULL)
-			first_list_next(a, (int)ret_atol);
-		else
-			list_next(a, (int)ret_atol);
+		list_next(a, (int)ret_atol);
 		check_duplication_and_index(a, (int)ret_atol);
 	}
 	*pflag = P_NOT_END;

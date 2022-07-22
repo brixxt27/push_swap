@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/21 21:52:52 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/22 20:12:33 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SRCS		= 	$(addprefix ./,\
 				operations_about_stack.c\
 				check_exception_and_index.c\
 				check_order.c\
-				free_stack.c)
+				less_than_five.c)
 # B_SRCS		=	$(addprefix $(B_SRCS_DIR)/,\
 # 				)
 LIBFT_OBJS	= $(LIBFT_SRCS:.c=.o)
