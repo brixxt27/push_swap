@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 19:48:46 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:21:17 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char *argv[])
 	b = init_stack();
 	parse(argv, a);
 	check_order(a);
-	if (a->size < 6)
+	if (a->total < 6)
 		less_than_five(a, b);
 	// else
 	// 	sort();

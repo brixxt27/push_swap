@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 17:21:06 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 20:41:52 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:33:27 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,33 @@
 
 static void	sort_at_three(t_stack *a)
 {
-	if (a->top->index == a->size - 3)
+	if (a->top->index == a->total - 3 && a->top->next->index == a->total - 1)
 	{
-		sa(a);
-		ra(a);
+		sa(a, YES);
+		ra(a, YES);
 	}
-	else if (a->top->index == a->size - 2)
+	else if (a->top->index == a->total - 2)
 	{
-		if (a->top->next->index == 0)
-			sa(a);
+		if (a->top->next->index == a->total - 3)
+			sa(a, YES);
 		else
-			ra(a);
+			ra(a, YES);
 	}
-	else
+	else if (a->top->index == a->total - 1)
 	{
-		if (a->top->index == 2)
-			ra(a);
+		if (a->top->next->index == a->total - 3)
+			ra(a, YES);
 		else
 		{
-			ra(a);
-			ra(a);
+			ra(a, YES);
+			ra(a, YES);
 		}
 	}
 }
 
 static void	pb_until_three(t_stack *a, t_stack *b)
 {
-	whlie (a->size > 3)
+	while (a->size > 3)
 	{
 		pb(a, b);
 	}	
@@ -48,17 +48,17 @@ static void	pb_until_three(t_stack *a, t_stack *b)
 
 void	less_than_five(t_stack *a, t_stack *b)
 {
-	if (a->size == 2)
-		sa(a);
-	else if (a->size == 3)
+	if (a->total == 2)
+		sa(a, YES);
+	else if (a->total == 3)
 		sort_at_three(a);
-	else if (a->size == 4)
+	else if (a->total == 4)
 	{
 		pb_until_three(a, b);
 		sort_at_three(a);
 		pa(a, b);
 	}
-	else if (a->size == 5)
+	else if (a->total == 5)
 	{
 		pb_until_three(a, b);
 		sort_at_three(a);

@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:32:21 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 17:03:08 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 21:19:21 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ void	list_next(t_stack *ps, int data)
 	node->data = data;
 	node->index = 0;
 	node->next = NULL;
+	ps->size++;
+	ps->total++;
 	if (ps->top == NULL)
 	{
 		node->prev = NULL;
 		ps->top = node;
 		ps->bottom = node;
-		ps->size = 1;
 	}
 	else
 	{
 		node->prev = ps->bottom;
 		ps->bottom->next = node;
 		ps->bottom = node;
-		ps->size++;
 	}
 }
