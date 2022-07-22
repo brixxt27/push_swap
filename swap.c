@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 20:35:24 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 21:52:29 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 22:28:12 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	sa(t_stack *a, t_print print)
 	a->top->index = a->top->next->index;
 	a->top->next->index = temp_i;
 	if (print == YES)
-		ft_putstr_fd("sa", 1);
+		ft_putstr_fd("sa\n", 1);
 }
 
 void	sb(t_stack *b, t_print print)
@@ -40,12 +40,12 @@ void	sb(t_stack *b, t_print print)
 	b->top->index = b->top->next->index;
 	b->top->next->index = temp_i;
 	if (print == YES)
-		ft_putstr_fd("sb", 1);
+		ft_putstr_fd("sb\n", 1);
 }
 
 void	ss(t_stack *a, t_stack *b)
 {
 	sa(a, NO);
 	sb(b, NO);
-	ft_putstr_fd("ss", 1);
+	ft_putstr_fd("ss\n", 1);
 }

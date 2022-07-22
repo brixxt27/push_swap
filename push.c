@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 21:49:46 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 22:00:48 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 22:27:52 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	pa(t_stack *a, t_stack *b)
 
 	temp = pop(b);
 	push(a, temp);
-	ft_putstr_fd("pa", 1);
+	ft_putstr_fd("pa\n", 1);
 }
 
 void	pb(t_stack *a, t_stack *b)
@@ -28,5 +28,5 @@ void	pb(t_stack *a, t_stack *b)
 
 	temp = pop(a);
 	push(b, temp);
-	ft_putstr_fd("pb", 1);
+	ft_putstr_fd("pb\n", 1);
 }

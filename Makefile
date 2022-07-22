@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/22 22:01:21 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/22 23:00:14 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ SRCS		= 	$(addprefix ./,\
 				check_order.c\
 				less_than_five.c\
 				push.c\
-				swap.c)
+				swap.c\
+				rotate.c\
+				reverse_rotate.c)
 # B_SRCS		=	$(addprefix $(B_SRCS_DIR)/,\
 # 				)
 LIBFT_OBJS	= $(LIBFT_SRCS:.c=.o)

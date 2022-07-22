@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 22:01:06 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 22:59:58 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,14 @@ void	ss(t_stack *a, t_stack *b);
 void	pa(t_stack *a, t_stack *b);
 void	pb(t_stack *a, t_stack *b);
 
+// rotate.c
+void	ra(t_stack *a, t_print print);
+void	rb(t_stack *b, t_print print);
+void	rr(t_stack *a, t_stack *b);
+
+// reverse_rotate.c
+void	rra(t_stack *a, t_print print);
+void	rrb(t_stack *b, t_print print);
+void	rrr(t_stack *a, t_stack *b);
 
 #endif

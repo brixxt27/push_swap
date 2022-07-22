@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 19:47:40 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 22:26:35 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ t_node	*pop(t_stack *ps)
 	node = ps->top;
 	ps->top = ps->top->next;
 	ps->size--;
-	ps->top->prev = NULL;
+	if (ps->top)
+		ps->top->prev = NULL;
 	node->next = NULL;
 	return (node);
 }

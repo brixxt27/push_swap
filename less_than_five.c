@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 17:21:06 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 21:33:27 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 23:01:27 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	sort_at_three(t_stack *a)
 		if (a->top->next->index == a->total - 3)
 			sa(a, YES);
 		else
-			ra(a, YES);
+			rra(a, YES);
 	}
 	else if (a->top->index == a->total - 1)
 	{
@@ -32,8 +32,8 @@ static void	sort_at_three(t_stack *a)
 			ra(a, YES);
 		else
 		{
-			ra(a, YES);
-			ra(a, YES);
+			sa(a, YES);
+			rra(a, YES);
 		}
 	}
 }

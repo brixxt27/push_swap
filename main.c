@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 21:21:17 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 22:46:23 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static void	print_stack(t_stack *a, char c)
 		curr = curr->next;
 	}
 }
+// 여기까지 지우기
 
 int	main(int argc, char *argv[])
 {
