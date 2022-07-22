@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 17:21:06 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 23:01:27 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/22 23:04:43 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	sort_at_three(t_stack *a)
 	}
 }
 
-static void	pb_until_three(t_stack *a, t_stack *b)
+static void	pb_until_there_are_three(t_stack *a, t_stack *b)
 {
 	while (a->size > 3)
 	{
@@ -54,13 +54,13 @@ void	less_than_five(t_stack *a, t_stack *b)
 		sort_at_three(a);
 	else if (a->total == 4)
 	{
-		pb_until_three(a, b);
+		pb_until_there_are_three(a, b);
 		sort_at_three(a);
 		pa(a, b);
 	}
 	else if (a->total == 5)
 	{
-		pb_until_three(a, b);
+		pb_until_there_are_three(a, b);
 		sort_at_three(a);
 		pa(a, b);
 		pa(a, b);
