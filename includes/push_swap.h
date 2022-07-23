@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 22:59:58 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/23 19:03:14 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ typedef enum e_print
 	NO
 }	t_print;
 
+typedef struct s_range_of_numbers
+{
+	size_t	small;
+	size_t	big;
+}	t_range;
+
 
 t_stack	*init_stack(void);
 void	list_next(t_stack *ps, int data);
@@ -69,5 +75,8 @@ void	rr(t_stack *a, t_stack *b);
 void	rra(t_stack *a, t_print print);
 void	rrb(t_stack *b, t_print print);
 void	rrr(t_stack *a, t_stack *b);
+
+// sort.c
+void	sort(t_stack *a, t_stack *b);
 
 #endif

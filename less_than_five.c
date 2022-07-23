@@ -6,26 +6,11 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 17:21:06 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 17:40:15 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/23 18:12:12 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-// 아래 지우기
-// #include <stdio.h>
-// static void	print_stack(t_stack *a, char c)
-// {
-// 	t_node	*curr;
-
-// 	curr = a->top;
-// 	printf("stack %c : \n", c);
-// 	while (curr)
-// 	{
-// 		printf("%d\n", curr->data);
-// 		curr = curr->next;
-// 	}
-// }
-// 여기까지 지우기
 
 static void	sort_at_three(t_stack *a)
 {
@@ -53,6 +38,16 @@ static void	sort_at_three(t_stack *a)
 	}
 }
 
+static size_t	find_index(t_node *node, size_t idx, size_t cnt)
+{
+	while (node->index != idx)
+	{
+		node = node->next;
+		cnt++;
+	}
+	return (cnt);
+}
+
 static void	pb_until_there_are_three(t_stack *a, t_stack *b)
 {
 	size_t	cnt;
@@ -65,11 +60,7 @@ static void	pb_until_there_are_three(t_stack *a, t_stack *b)
 	{
 		node = a->top;
 		cnt = 1;
-		while (node->index != idx)
-		{
-			node = node->next;
-			cnt++;
-		}
+		cnt = find_index(node, idx, cnt);
 		if (cnt != 1 && cnt <= a->total / 2)
 			ra(a, YES);
 		else if (cnt > a->total / 2)
