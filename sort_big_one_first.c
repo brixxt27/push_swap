@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   sort_big_one_first.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 18:21:21 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 19:04:22 by jayoon           ###   ########.fr       */
+/*   Created: 2022/07/23 21:38:19 by jayoon            #+#    #+#             */
+/*   Updated: 2022/07/23 21:49:23 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	find_small_value(t_stack *a, int i, int	range)
+void	sort_big_one_first(t_stack *a, t_stack *b)
 {
-}
+	t_node	*curr;
+	size_t	i;
+	size_t	cnt;
 
-static void	a_to_b(t_stack *a, t_stack *b)
-{
-	t_range	range;
-	int	flag;
-
-	range.small = 0;
-	range.big = y = 0.000000053 * a->total * a->total + 0.03 * a->total + 14.5;
-	while (a->top != NULL)
+	while (!b->top)
 	{
-		flag = find_small_value(a, small, big);
+		curr = b->top;
+		i = a->size - 1;
+		cnt = 0;
+		while (curr->index != i)
+		{
+			cnt++;
+			curr = curr->next;
+		}
+		if (cnt <= i / 2)
+			while (b->top->index != i)
+				rb(b, YES);
+		else if (cnt > i / 2)
+			while (b->top->index != i)
+				rrb(b, YES);
+		pa(a, b);
 	}
-}
-
-void	sort(t_stack *a, t_stack *b)
-{
-	a_to_b(a, b);
-	b_to_a(a, b);
 }

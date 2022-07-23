@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 19:03:14 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/23 21:47:47 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,10 @@ void	rra(t_stack *a, t_print print);
 void	rrb(t_stack *b, t_print print);
 void	rrr(t_stack *a, t_stack *b);
 
-// sort.c
-void	sort(t_stack *a, t_stack *b);
+// make_sandglass.c
+void	make_sandglass(t_stack *a, t_stack *b);
+
+// sort_big_one_first.c
+void	sort_big_one_first(t_stack *a, t_stack *b);
 
 #endif
