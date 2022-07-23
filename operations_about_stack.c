@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/22 22:26:35 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/23 16:49:59 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_stack	*init_stack(void)
 	stack = malloc(sizeof(t_stack));
 	check_error(E_MALLOC, (long long)stack);
 	stack->size = 0;
+	stack->total = 0;
 	stack->top = NULL;
 	stack->bottom = NULL;
 	return (stack);
