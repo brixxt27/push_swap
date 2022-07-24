@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 22:50:10 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/24 11:40:55 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 21:55:41 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rra(t_stack *a, t_print print)
 {
 	t_node	*temp;
 
-	if (a->top != NULL)
+	if (a->top->next)
 	{
 		temp = a->bottom;
 		a->bottom = a->bottom->prev;
@@ -35,7 +35,7 @@ void	rrb(t_stack *b, t_print print)
 {
 	t_node	*temp;
 
-	if (b->top != NULL)
+	if (b->top->next)
 	{
 		temp = b->bottom;
 		b->bottom = b->bottom->prev;

@@ -6,30 +6,13 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/24 11:51:52 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:03:04 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "parse.h"
 #include "push_swap.h"
 
-// 아래 지우기
-#include <stdio.h>
-static void	print_stack(t_stack *a, char c)
-{
-	t_node	*curr;
-
-	curr = a->top;
-	printf("stack %c : \n", c);
-	while (curr)
-	{
-		printf("%d\n", curr->data);
-		curr = curr->next;
-	}
-}
-// 여기까지 지우기
-
-//sort_big_one_first  가 작동 안 함. 카톡에 make_sandglass만 작동한 사진이 나와있다. 디버깅을 해봐야 겠다.
 static void	sort(t_stack *a, t_stack *b)
 {
 	make_sandglass(a, b);
@@ -39,7 +22,7 @@ static void	sort(t_stack *a, t_stack *b)
 int	main(int argc, char *argv[])
 {
 	t_stack	*a;
-	t_stack *b;
+	t_stack	*b;
 
 	if (argc < 2)
 		exit(0);
@@ -51,10 +34,6 @@ int	main(int argc, char *argv[])
 		less_than_five(a, b);
 	else
 		sort(a, b);
-	// 지우기
-	print_stack(a, 'A');
-	print_stack(b, 'B');
-	// 지우기
 	free_stack(a);
 	free_stack(b);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 21:05:27 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 16:49:59 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 21:52:39 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	push(t_stack *ps, t_node *node)
 	if (ps->top == NULL)
 	{
 		ps->top = node;
+		ps->top->next = NULL;
 		ps->bottom = node;
 		ps->size++;
 	}
@@ -48,8 +49,6 @@ t_node	*pop(t_stack *ps)
 {
 	t_node	*node;
 
-	if (!ps->top)
-		return (NULL);
 	node = ps->top;
 	ps->top = ps->top->next;
 	ps->size--;

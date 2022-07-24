@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 21:47:47 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:03:54 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ typedef struct s_range_of_numbers
 	size_t	small;
 	size_t	big;
 }	t_range;
-
 
 t_stack	*init_stack(void);
 void	list_next(t_stack *ps, int data);

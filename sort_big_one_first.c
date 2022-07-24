@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:38:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 21:49:23 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 21:01:35 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	sort_big_one_first(t_stack *a, t_stack *b)
 	size_t	i;
 	size_t	cnt;
 
-	while (!b->top)
+	while (b->top)
 	{
 		curr = b->top;
-		i = a->size - 1;
+		i = b->size - 1;
 		cnt = 0;
 		while (curr->index != i)
 		{
