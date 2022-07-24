@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:11:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/24 23:03:54 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:35:54 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,21 +59,21 @@ void	less_than_five(t_stack *a, t_stack *b);
 // swap.c
 void	sa(t_stack *a, t_print print);
 void	sb(t_stack *b, t_print print);
-void	ss(t_stack *a, t_stack *b);
+void	ss(t_stack *a, t_stack *b, t_print print);
 
 // push.c
-void	pa(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
+void	pa(t_stack *a, t_stack *b, t_print print);
+void	pb(t_stack *a, t_stack *b, t_print print);
 
 // rotate.c
 void	ra(t_stack *a, t_print print);
 void	rb(t_stack *b, t_print print);
-void	rr(t_stack *a, t_stack *b);
+void	rr(t_stack *a, t_stack *b, t_print print);
 
 // reverse_rotate.c
 void	rra(t_stack *a, t_print print);
 void	rrb(t_stack *b, t_print print);
-void	rrr(t_stack *a, t_stack *b);
+void	rrr(t_stack *a, t_stack *b, t_print print);
 
 // make_sandglass.c
 void	make_sandglass(t_stack *a, t_stack *b);

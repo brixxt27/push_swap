@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:16:46 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 21:49:04 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:37:22 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ static int	find_small_value(t_stack *a, t_range *range)
 
 static void	do_it_at_small(t_stack *a, t_stack *b, t_range *range)
 {
-	pb(a, b);
+	pb(a, b, YES);
 	range->small++;
 }
 
 static void	do_it_at_middle(t_stack *a, t_stack *b, t_range *range)
 {
-	pb(a, b);
+	pb(a, b, YES);
 	rb(b, YES);
 	range->small++;
 }

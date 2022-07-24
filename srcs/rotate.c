@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 22:13:56 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/24 23:03:29 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:33:30 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,10 @@ void	rb(t_stack *b, t_print print)
 		ft_putstr_fd("rb\n", 1);
 }
 
-void	rr(t_stack *a, t_stack *b)
+void	rr(t_stack *a, t_stack *b, t_print print)
 {
 	ra(a, NO);
 	rb(b, NO);
-	ft_putstr_fd("rr\n", 1);
+	if (print == YES)
+		ft_putstr_fd("rr\n", 1);
 }

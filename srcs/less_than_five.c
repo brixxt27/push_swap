@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 17:21:06 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/23 18:12:12 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:37:22 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static void	pb_until_there_are_three(t_stack *a, t_stack *b)
 				i--;
 			}
 		}
-		pb(a, b);
+		pb(a, b, YES);
 		idx++;
 	}
 }
@@ -87,13 +87,13 @@ void	less_than_five(t_stack *a, t_stack *b)
 	{
 		pb_until_there_are_three(a, b);
 		sort_at_three(a);
-		pa(a, b);
+		pa(a, b, YES);
 	}
 	else if (a->total == 5)
 	{
 		pb_until_there_are_three(a, b);
 		sort_at_three(a);
-		pa(a, b);
-		pa(a, b);
+		pa(a, b, YES);
+		pa(a, b, YES);
 	}
 }

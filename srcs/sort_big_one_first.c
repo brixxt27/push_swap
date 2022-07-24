@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 21:38:19 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/24 21:01:35 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:37:11 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ void	sort_big_one_first(t_stack *a, t_stack *b)
 		else if (cnt > i / 2)
 			while (b->top->index != i)
 				rrb(b, YES);
-		pa(a, b);
+		pa(a, b, YES);
 	}
 }
