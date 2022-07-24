@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 16:31:28 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/24 11:46:03 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 11:51:52 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static void	print_stack(t_stack *a, char c)
 }
 // 여기까지 지우기
 
+//sort_big_one_first  가 작동 안 함. 카톡에 make_sandglass만 작동한 사진이 나와있다. 디버깅을 해봐야 겠다.
 static void	sort(t_stack *a, t_stack *b)
 {
 	make_sandglass(a, b);
