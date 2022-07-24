@@ -6,7 +6,7 @@
 #    By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 21:13:32 by jayoon            #+#    #+#              #
-#    Updated: 2022/07/23 21:38:02 by jayoon           ###   ########.fr        #
+#    Updated: 2022/07/24 23:22:32 by jayoon           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,7 @@ INCS_DIR 	= includes
 LIBFT_DIR	= libft
 LIBFT		= libft.a
 
-# SRCS		= 	$(addprefix $(SRCS_DIR)/,\
-# 				)
-SRCS		= 	$(addprefix ./,\
+SRCS		= 	$(addprefix $(SRCS_DIR)/,\
 				main.c\
 				parse.c\
 				error.c\

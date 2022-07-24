@@ -6,7 +6,7 @@
 /*   By: jayoon <jayoon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:01:50 by jayoon            #+#    #+#             */
-/*   Updated: 2022/07/21 17:55:00 by jayoon           ###   ########.fr       */
+/*   Updated: 2022/07/24 23:25:17 by jayoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	check_order(t_stack *a)
 {
 	t_node	*curr;
-	int		is_sorted;
+	t_bool	is_sorted;
 
 	curr = a->top;
 	is_sorted = TRUE;
